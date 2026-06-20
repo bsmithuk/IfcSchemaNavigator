@@ -15,7 +15,7 @@ style.css           styles
 data/               pre-parsed schema data (JS modules, ~2.5 MB)
 schema/
   parse_schemas.py  parser — regenerates data/ from source schemas
-  *.exp / *.zip     schema source files (not committed — see DOWNLOADS.txt)
+  *.exp / *.zip     schema source files (not committed — see Download_Schemas.txt)
 README.md
 .gitignore
 ```
