@@ -5,22 +5,22 @@ Required files
 --------------
 
 IFC2X3_TC1.exp
-  https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/IFC2X3_TC1.exp
+  https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/EXPRESS/IFC2X3_TC1.exp
 
 IFC2X3_TC1.zip  (contains Pset XML files)
-  https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/IFC2X3_TC1.zip
+  https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/IFC2x3_TC1_HTML_distribution-pset_errata.zip
 
 IFC4.exp
-  https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/IFC4.exp
+  https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/EXPRESS/IFC4.exp
 
 IFC4.zip  (contains Pset XML files)
-  https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/IFC4.zip
+  https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/ifc4-add2-tc1.zip
 
 IFC4X3_ADD2.exp
-  https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/IFC4X3_ADD2.exp
+  https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/IFC4X3_ADD2.exp
 
 IFC4X3_ADD2.zip  (contains Pset XML files at IFC4_3/HTML/annex-a-psd.zip)
-  https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/IFC4X3_ADD2.zip
+  https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/IFC4.3.2.0.zip
 
 After placing these files, run:
   cd app/schema
