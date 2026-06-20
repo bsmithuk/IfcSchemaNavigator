@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFC Schema Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="govuk-header" role="banner">
+    <div class="govuk-header__container">
+      <span class="govuk-header__logotype">IFC Schema Navigator</span>
+    </div>
+  </header>
+
+  <div class="app-subheader">
+    <div class="app-subheader__inner">
+      <div class="subheader-field">
+        <label class="subheader-label" for="schema-select">Schema</label>
+        <select id="schema-select"></select>
+      </div>
+      <div class="subheader-field">
+        <label class="subheader-label" for="search-input">Search</label>
+        <input type="search" id="search-input" placeholder="Entities, types, psets…" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="filter-chips" role="group" aria-label="Filter by type">
+        <label class="chip"><input type="checkbox" id="show-entities" checked> Entities</label>
+        <label class="chip"><input type="checkbox" id="show-types" checked> Types</label>
+        <label class="chip"><input type="checkbox" id="show-psets" checked> Psets</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+      <div class="finder-layout">
+
+        <div id="result-panel">
+          <div class="result-panel-header">
+            <span id="result-count"></span>
+          </div>
+          <div id="tree" role="listbox" aria-label="Entity and type list"></div>
+        </div>
+
+        <div id="detail-panel">
+          <div id="detail-content">
+            <p class="placeholder">Select an entity or type from the list.</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="data/ifc_IFC2X3.js"></script>
+  <script src="data/ifc_IFC4.js"></script>
+  <script src="data/ifc_IFC4X3_ADD2.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
