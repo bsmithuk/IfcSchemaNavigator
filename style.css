@@ -101,18 +101,18 @@ body { display: flex; flex-direction: column; min-height: 100vh; }
 .chip input[type=checkbox]:focus { outline: 3px solid var(--focus); outline-offset: 2px; }
 
 /* ── page layout ── */
-.govuk-width-container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+.govuk-width-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 30px; }
 .govuk-main-wrapper { padding: 30px 0; }
 
 .finder-layout {
-  display: flex;
+  display: grid;
+  grid-template-columns: 340px 1fr;
   align-items: start;
   gap: 30px;
 }
 
 /* ── result panel (sticky scrollable list) ── */
 #result-panel {
-  flex: 0 0 340px;
   position: sticky;
   top: var(--subheader-h);
   height: calc(100vh - var(--subheader-h));
@@ -124,10 +124,10 @@ body { display: flex; flex-direction: column; min-height: 100vh; }
 }
 
 #detail-panel {
-  flex: 1 1 0;
   min-width: 0;
   overflow-x: hidden;
   background: white;
+  border: 1px solid var(--border);
   min-height: calc(100vh - var(--subheader-h) - 60px);
 }
 

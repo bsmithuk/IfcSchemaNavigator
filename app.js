@@ -54,10 +54,9 @@ function initApp() {
   });
 
   window.addEventListener('hashchange', applyHash);
-  window.addEventListener('resize', updateSubheaderHeight);
+  new ResizeObserver(updateSubheaderHeight).observe(document.querySelector('.app-subheader'));
 
   loadSchema(state.schemaKey, true);
-  updateSubheaderHeight();
 }
 
 function updateSubheaderHeight() {
