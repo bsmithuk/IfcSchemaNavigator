@@ -370,6 +370,34 @@ function renderEntity(name) {
     html += `</div>`;
   }
 
+  // Property Sets
+  if (state.schema.psets) {
+    const chainSet = new Set(chain);
+    const directPsets = [];
+    const inheritedPsets = [];
+
+    Object.entries(state.schema.psets).forEach(([pname, ps]) => {
+      if (!ps.cls) return;
+      if (ps.cls.includes(name)) directPsets.push(pname);
+      else if (ps.cls.some(c => chainSet.has(c))) inheritedPsets.push(pname);
+    });
+
+    directPsets.sort();
+    inheritedPsets.sort();
+
+    if (directPsets.length || inheritedPsets.length) {
+      html += `<div class="section-header">Property Sets (${directPsets.length + inheritedPsets.length})</div>`;
+      html += `<div class="subtype-list">`;
+      directPsets.forEach(p => { html += `<a href="#" data-nav="${esc(p)}">${esc(p)}</a>`; });
+      html += `</div>`;
+      if (inheritedPsets.length) {
+        html += `<details><summary>Inherited (${inheritedPsets.length})</summary><div class="subtype-list">`;
+        inheritedPsets.forEach(p => { html += `<a href="#" data-nav="${esc(p)}">${esc(p)}</a>`; });
+        html += `</div></details>`;
+      }
+    }
+  }
+
   return html;
 }
 
